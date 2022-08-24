@@ -579,6 +579,7 @@ def img2img(prompt: str, init_img, ddim_steps: int, use_GFPGAN: bool, prompt_mat
 
     return output_images, seed, info
 
+logging.info("Type localhost:7860 in your browser to see the interface.")
 
 sample_img2img = "assets/stable-samples/img2img/sketch-mountains-input.jpg"
 sample_img2img = sample_img2img if os.path.exists(sample_img2img) else None
@@ -647,5 +648,4 @@ demo = gr.TabbedInterface(
     tab_names=[x[1] for x in interfaces],
     css=("" if opt.no_progressbar_hiding else css_hide_progressbar)
 )
-print("Type localhost:7860 in your browser to see the interface.")
 demo.launch(server_name="0.0.0.0",server_port=7860)
