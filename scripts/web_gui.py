@@ -200,7 +200,7 @@ def draw_prompt_matrix(im, width, height, all_prompts):
 
     fontsize = (width + height) // 25
     line_spacing = fontsize // 2
-    fnt = ImageFont.truetype("arial.ttf", fontsize)
+    fnt = ImageFont.load_default()
     color_active = (0, 0, 0)
     color_inactive = (153, 153, 153)
 

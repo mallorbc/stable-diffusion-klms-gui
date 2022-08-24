@@ -1,10 +1,11 @@
 FROM python:3.9
 
+
 RUN apt update -y \
 && apt upgrade -y
 
-RUN apt install git ffmpeg libsm6 libxext6  -y
 
+RUN apt install git ffmpeg libsm6 libxext6 -y
 
 RUN pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
 
