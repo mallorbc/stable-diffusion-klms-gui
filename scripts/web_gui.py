@@ -648,4 +648,4 @@ demo = gr.TabbedInterface(
     css=("" if opt.no_progressbar_hiding else css_hide_progressbar)
 )
 
-demo.launch()
+demo.launch(server_name="0.0.0.0")
