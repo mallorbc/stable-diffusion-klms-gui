@@ -1,11 +1,10 @@
 FROM python:3.9
 
-ENV GRADIO_SERVER_PORT 7860
-
 RUN apt update -y \
 && apt upgrade -y
 
-RUN apt install git -y
+RUN apt install git ffmpeg libsm6 libxext6  -y
+
 
 RUN pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
 
@@ -23,6 +22,7 @@ torch-fidelity==0.3.0 \
 transformers==4.19.2 \
 torchmetrics==0.6.0 \
 kornia==0.6 \
+pytorch-lightning==1.4.2 \
 invisible-watermark \
 gradio \
 accelerate \
@@ -44,8 +44,10 @@ RUN cd /app \
 && pip install -e .
 
 RUN mkdir -p /app/src/gfpgan/experiments/pretrained_models/
+RUN mkdir - /app/models/ldm/stable-diffusion-v1/
 
 RUN wget https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth -O /app/src/gfpgan/experiments/pretrained_models/GFPGANv1.3.pth
 
+WORKDIR /app
 
-CMD [ "python", "/app/scripts/web_gui.py" ]
+CMD [ "python", "scripts/web_gui.py" ]
