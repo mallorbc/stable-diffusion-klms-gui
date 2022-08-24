@@ -647,5 +647,5 @@ demo = gr.TabbedInterface(
     tab_names=[x[1] for x in interfaces],
     css=("" if opt.no_progressbar_hiding else css_hide_progressbar)
 )
-
-demo.launch(server_name="0.0.0.0")
+print("Type localhost:7860 in your browser to see the interface.")
+demo.launch(server_name="0.0.0.0",server_port=7860)

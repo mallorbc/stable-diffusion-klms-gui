@@ -1,2 +1,3 @@
 #!/bin/bash
-docker run  -p 7680:7680 --gpus all -v `pwd`/diffusion_model:/app/models/ldm/stable-diffusion-v1/ --ipc host stable_diffusion 
+mkdir -p ./log
+docker run --rm -p 7860:7860 --gpus all -v `pwd`/diffusion_model:/app/models/ldm/stable-diffusion-v1/ -v `pwd`/log:/app/log --name stable_diffusion --ipc host stable_diffusion 
