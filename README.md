@@ -1,4 +1,38 @@
-# Stable Diffusion
+# Running GUI
+
+This repo gives access to a GUI, text2image, image2image, face restoration, K-LMS sampling(better sampling for better images) and more.
+
+Given you have nvidia docker installed on Linux or on Windows WSL, it will guranteed work
+
+## Requirements
+
+1. Nvidia GPU with roughly 6GB+ Vram
+2. nvidia-docker installed
+
+## Setup
+
+1. Go to ```docker``` folderand run ```./build_image.sh```
+2. Download the Compvis checkpoint from Huggingface
+3. Put the model in a folder called ```diffusion_model```
+
+Thats it as long as you have nvidia-docker installed
+
+## Running
+
+Run ```./run_image.sh```  this will create the application.  Once everything is done downloading go to ```localhost:7860``` in your browser
+
+Saved images will be in ```log```
+
+## Saving Container
+
+To save the container after downloads go to ```docker``` and run ```./save_container``` it will update the image with the current state
+
+## Updating
+
+To recieve changes made in this repo go to ```docker``` and run ```./update_image.sh```
+
+
+# Original Stable Diffusion README
 *Stable Diffusion was made possible thanks to a collaboration with [Stability AI](https://stability.ai/) and [Runway](https://runwayml.com/) and builds upon our previous work:*
 
 [**High-Resolution Image Synthesis with Latent Diffusion Models**](https://ommer-lab.com/research/latent-diffusion-models/)<br/>
