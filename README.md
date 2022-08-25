@@ -1,6 +1,6 @@
 # Running GUI
 
-This repo gives access to text2image, image2image, face restoration, and more.
+This repo gives access to a GUI, text2image, image2image, face restoration, K-LMS sampling(better sampling for better images) and more.
 
 Given you have nvidia docker installed on Linux or on Windows WSL, it will guranteed work
 
