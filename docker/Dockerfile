@@ -1,8 +1,15 @@
 FROM python:3.9
 
 
-RUN apt update -y \
-&& apt upgrade -y
+RUN apt-get update
+RUN apt-get install -y --no-install-recommends software-properties-common
+RUN apt-add-repository contrib
+RUN apt-get update
+
+RUN echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | debconf-set-selections
+RUN apt-get install -y --no-install-recommends fontconfig ttf-mscorefonts-installer
+# ADD localfonts.conf /etc/fonts/local.conf
+RUN fc-cache -f -v
 
 
 RUN apt install git ffmpeg libsm6 libxext6 -y
