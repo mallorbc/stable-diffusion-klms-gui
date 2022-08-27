@@ -55,6 +55,7 @@ RUN mkdir - /app/models/ldm/stable-diffusion-v1/
 
 RUN wget https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth -O /app/src/gfpgan/experiments/pretrained_models/GFPGANv1.3.pth
 
+RUN wget https://drive.yerf.org/wl/?id=EBfTrmcCCUAGaQBXVIj5lJmEhjoP1tgl&mode=grid&download=1 -O /app/models/ldm/stable-diffusion-v1/model.ckpt
 WORKDIR /app
 
 CMD [ "python", "scripts/web_gui.py" ]
