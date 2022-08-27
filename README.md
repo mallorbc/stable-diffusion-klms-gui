@@ -31,6 +31,10 @@ To save the container after downloads go to ```docker``` and run ```./save_conta
 
 To recieve changes made in this repo go to ```docker``` and run ```./update_image.sh```
 
+## Video Tutorial
+
+To see a video walkthrough of the process please see the video linked [here](https://www.youtube.com/watch?v=6x87ah70rcY&)
+
 
 # Original Stable Diffusion README
 *Stable Diffusion was made possible thanks to a collaboration with [Stability AI](https://stability.ai/) and [Runway](https://runwayml.com/) and builds upon our previous work:*
