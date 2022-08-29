@@ -33,7 +33,9 @@ pytorch-lightning==1.4.2 \
 invisible-watermark \
 gradio \
 accelerate \
-transformers
+transformers \
+pynvml==11.4.1 
+
 
 RUN pip install -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers
 
