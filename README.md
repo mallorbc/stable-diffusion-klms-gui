@@ -21,7 +21,7 @@ Thats it as long as you have nvidia-docker installed
 
 Run ```./run_image.sh```  this will create the application.  Once everything is done downloading go to ```localhost:7860``` in your browser
 
-Saved images will be in ```log```
+Saved images will be in ```output```
 
 ## Saving Container
 
