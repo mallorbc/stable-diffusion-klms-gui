@@ -4,6 +4,10 @@ This repo gives access to a GUI, text2image, image2image, face restoration, K-LM
 
 Given you have nvidia docker installed on Linux or on Windows WSL, it will guranteed work
 
+## Video Tutorial
+
+To see a video walkthrough of the process please see the video linked [here](https://www.youtube.com/watch?v=6x87ah70rcY&)
+
 ## Requirements
 
 1. Nvidia GPU with roughly 6GB+ Vram
@@ -31,9 +35,7 @@ To save the container after downloads go to ```docker``` and run ```./save_conta
 
 To recieve changes made in this repo go to ```docker``` and run ```./update_image.sh```
 
-## Video Tutorial
 
-To see a video walkthrough of the process please see the video linked [here](https://www.youtube.com/watch?v=6x87ah70rcY&)
 
 
 # Original Stable Diffusion README
