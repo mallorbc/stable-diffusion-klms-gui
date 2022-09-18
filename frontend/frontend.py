@@ -2,6 +2,10 @@ import gradio as gr
 from frontend.css_and_js import *
 from frontend.css_and_js import css
 import frontend.ui_functions as uifn
+import yaml
+
+def append_prompt(prompt: str, value: str):
+    return prompt + " " + value;
 
 def draw_gradio_ui(opt, img2img=lambda x: x, txt2img=lambda x: x, txt2img_defaults={}, RealESRGAN=True, GFPGAN=True,
                    txt2img_toggles={}, txt2img_toggle_defaults='k_euler', show_embeddings=False, img2img_defaults={},
@@ -20,6 +24,27 @@ def draw_gradio_ui(opt, img2img=lambda x: x, txt2img=lambda x: x, txt2img_defaul
                                                 value=txt2img_defaults['prompt'],
                                                 show_label=False)
                     txt2img_btn = gr.Button("Generate", elem_id="generate", variant="primary")
+
+                with gr.Row(elem_id="modifier_row"):
+                    with gr.Accordion(
+                                label = "Prompt Modifiers",
+                                open = False
+                            ):
+                        with open("/app/frontend/prompt_modifiers.json", 'r', encoding='utf8') as f:
+                            prompt_modifiers = yaml.safe_load(f)
+                            for group in prompt_modifiers:
+                                with gr.Accordion(
+                                    label = group[0],
+                                    open = False
+                                ):
+                                    for modifier in group[1]:
+                                        print(f"Adding Modifier: {modifier}")
+                                        button_modifier = gr.Button(modifier)
+                                        button_modifier.click(
+                                            append_prompt,
+                                            [txt2img_prompt, button_modifier],
+                                            [txt2img_prompt]
+                                        )
 
                 with gr.Row(elem_id='body').style(equal_height=False):
                     with gr.Column():
