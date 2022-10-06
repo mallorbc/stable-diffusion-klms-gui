@@ -31,7 +31,7 @@ torchmetrics==0.6.0 \
 kornia==0.6 \
 pytorch-lightning==1.4.2 \
 invisible-watermark \
-gradio \
+gradio==3.2.1b2 \
 accelerate \
 transformers \
 pynvml==11.4.1 

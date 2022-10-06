@@ -4,10 +4,15 @@ This repo gives access to a GUI, text2image, image2image, face restoration, K-LM
 
 Given you have nvidia docker installed on Linux or on Windows WSL, it will guranteed work
 
+## Video Tutorial
+
+To see a video walkthrough of the process please see the video linked [here](https://www.youtube.com/watch?v=6x87ah70rcY&)
+
 ## Requirements
 
 1. Nvidia GPU with roughly 6GB+ Vram
 2. nvidia-docker installed
+3. Minimum of 32GB RAM of Windows(though 24GB MAY work).  16GB should work for Linux
 
 ## Setup
 
@@ -21,7 +26,7 @@ Thats it as long as you have nvidia-docker installed
 
 Run ```./run_image.sh```  this will create the application.  Once everything is done downloading go to ```localhost:7860``` in your browser
 
-Saved images will be in ```log```
+Saved images will be in ```outputs```
 
 ## Saving Container
 
@@ -31,9 +36,10 @@ To save the container after downloads go to ```docker``` and run ```./save_conta
 
 To recieve changes made in this repo go to ```docker``` and run ```./update_image.sh```
 
-## Video Tutorial
+## Troubleshooting
 
-To see a video walkthrough of the process please see the video linked [here](https://www.youtube.com/watch?v=6x87ah70rcY&)
+If you are having issues with volumes(errors where it can't find files) check out the ```AIO``` branch.
+
 
 
 # Original Stable Diffusion README
