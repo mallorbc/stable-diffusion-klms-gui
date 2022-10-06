@@ -12,7 +12,7 @@ To see a video walkthrough of the process please see the video linked [here](htt
 
 1. Nvidia GPU with roughly 6GB+ Vram
 2. nvidia-docker installed
-3. Minimum of 32GB RAM
+3. Minimum of 32GB RAM of Windows.  16GB should work for Linux
 
 ## Setup
 
