@@ -36,6 +36,9 @@ To save the container after downloads go to ```docker``` and run ```./save_conta
 
 To recieve changes made in this repo go to ```docker``` and run ```./update_image.sh```
 
+## Troubleshooting
+
+If you are having issues with volumes(errors where it can't find files) check out the ```AIO``` branch.
 
 
 
